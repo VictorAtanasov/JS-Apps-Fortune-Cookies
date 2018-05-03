@@ -2,13 +2,12 @@ var homeController = function(){
 
     function home(context){
         var data;
-        cookiesData.cookies.getAll()
+        dataRequester.get('api/cookies')
             .then((resData) => {
                 data = resData;
                 return templates.get('home')
             })
             .then((template) => {
-                console.log(data.result)
                 context.$element().html(template(data.result))
             })
     }

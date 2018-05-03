@@ -9,3 +9,13 @@
     });
 }());
 
+$(function(){
+    if(localStorage.getItem('signed-in-user-auth-key')){
+        $('#register-btn').addClass('hidden');
+        $('#logout-btn').addClass('block');
+    } else {
+        $('#register-btn').addClass('block');
+        $('#logout-btn').addClass('hidden');
+    }
+});
+

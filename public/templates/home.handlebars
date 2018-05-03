@@ -1,5 +1,20 @@
-<h1>Wellcome to this dump and useless app for fortune messages!</h1>
-
-{{#each this}}
-    <h3>{{text}}</h3>
-{{/each}}
+<h1>Welcome to this dump and useless app for fortune messages!</h1>
+<div class="card-columns">
+    {{#each this}}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{img}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{text}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted"><strong>Category: </strong>{{category}}</h6>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Likes: </strong>{{likes}}</li>
+                <li class="list-group-item"><strong>Dislikes: </strong>{{dislikes}}</li>
+                <li class="list-group-item"><strong>Hours: </strong>{{hours}}</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Share</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

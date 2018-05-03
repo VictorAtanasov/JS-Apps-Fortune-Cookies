@@ -7,10 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./node_modules/toastr/build/toastr.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <header>
-        <a href="#/auth/register" class="btn btn-primary">Register</a>
+        <a href="#/auth/register" class="btn btn-primary" id="register-btn">Register</a>
+        <button class="btn btn-danger" id="logout-btn">Logout</button>
     </header>
 
     <div id="content"></div>
@@ -21,10 +23,12 @@
     <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
     <script src="./node_modules/sammy/lib/min/sammy-latest.min.js"></script>
     <script src="./node_modules/toastr/build/toastr.min.js"></script>
+    <script src="./node_modules/crypto-js/crypto-js.js"></script>
 
     <!-- Helpers -->
     <script src="./js/helpers/templates.js"></script>
-    <script src="./js/data/data.js"></script>
+    <script src="./js/app/data-requester.js"></script>
+    <script src="./js/app/data.js"></script>
 
     <!-- Controllers -->
     <script src="./js/controllers/home-controller.js"></script>
