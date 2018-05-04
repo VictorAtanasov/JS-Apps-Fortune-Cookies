@@ -15,6 +15,7 @@ var usersController = function(){
                             .then((user) => {
                                 toastr.success(`Hello, ${user}`);
                                 context.redirect('#/');
+                                document.location.reload(true);
                             })
                             .catch((data) => {
                                 toastr.error(data.responseJSON)
@@ -41,6 +42,7 @@ var usersController = function(){
                             })
                     }
                 });
+
             });
     };
 

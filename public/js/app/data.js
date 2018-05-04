@@ -36,10 +36,20 @@ var data = (function(){
             })
     };
 
+    function logOut(){
+        var promise = new Promise((resolve, reject) => {
+            localStorage.clear();
+            resolve('You\'re successfuly logged out!')
+        });
+
+        return promise;
+    }
+
     return {
         user: {
             logIn: logIn,
-            register: register
+            register: register,
+            logOut: logOut
         },
     }
 }());
