@@ -23,8 +23,8 @@ var dataRequester = (function(){
         return promise;
     };
 
-    function get(url){
-        return requester(url, 'GET')
+    function get(url, options){
+        return requester(url, 'GET', options)
     };
 
     function post(url, options){

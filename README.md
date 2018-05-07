@@ -1,6 +1,6 @@
-# Fortune Cookies
-JavaScript Applications Exam, 10 September 2015
+# My solution for the Telerik Academy JavaScript Applications Exam, 10 September 2015
 
+# Fortune Cookies
 Implement a SPA application for fortune cookies.
 
 ## Application description
@@ -25,7 +25,6 @@ The application must provide the following functionality
 				* It depends on the total count of fortune cookies
 * **All users** (even not logged in) can **see** fortune cookies, that are shared by any user
 * **Cookies** can be:
-	* Sorted by `likes` or `shareDate`
 	* Filtered by a single `category`
 		* i.e. show only the fortune cookies in a given `category`
 
@@ -38,9 +37,8 @@ Implement at least the following routes in your app:
 * `#/home`
   * Shows all fortune cookies
     * Available to all users, logged-in or not
-    * Provides a way to sort the cookies by `likes` or `shareDate`
     * Provides a way to filter fortune cookies by `category`
-* `#/home?category=CCCC`
+* `#/home/CCC`
   * Shows only the fortune cookies in category **CCC**
 * `#/my-cookie`
   * Shows the current hourly fortune cookie for the logged-in user
@@ -127,25 +125,3 @@ You can use libraries for:
 	*	GET
 		*	**Returns** an array with all categories
 
-## Deliverables
-
-* **ZIP** all your code, including the server
-  * Remove only the `node_modules` folder
-* Send the ZIP file on the page, provided in http://telerikacademy.com
-
-## Constraints and validation
-* Username
-  * A string
-  * Has length between 6 and 30
-  * Can contain only Latin letters, digits and the characters '\_' and '.'
-* Fortune Cookie Text
-  * A string
-  * Has length between 6 and 30
-  * Can contain any characters
-* Fortune Cookie Category
-  * A string
-  * Has length between 6 and 30
-  * Can contain any characters
-* Fortune Cookie Img
-  * A string
-  * Must be a valid url address

@@ -45,11 +45,52 @@ var data = (function(){
         return promise;
     }
 
+    function cookieActions(id, actionType){
+        var options = {
+            headers: {
+                'x-auth-key': localStorage.getItem('signed-in-user-auth-key')
+            },
+            data: {
+                type: actionType
+            }
+        }
+        return dataRequester.put(`api/cookies/${id}`, options)
+    }
+
+    function getCookie(){
+        var options = {
+            headers: {
+                'x-auth-key': localStorage.getItem('signed-in-user-auth-key')
+            }
+        };
+        return dataRequester.get('api/my-cookie', options)
+    }
+
+    function all(){
+        return dataRequester.get('api/cookies')
+    }
+
+    function addCookie(data){
+        var options = {
+            headers: {
+                'x-auth-key': localStorage.getItem('signed-in-user-auth-key')
+            },
+            data
+        };
+        return dataRequester.post('api/cookies', options)
+    }
+
     return {
         user: {
             logIn: logIn,
             register: register,
             logOut: logOut
         },
+        cookies:{
+            cookieActions: cookieActions,
+            getCookie: getCookie,
+            addCookie: addCookie,
+            all: all
+        }
     }
 }());

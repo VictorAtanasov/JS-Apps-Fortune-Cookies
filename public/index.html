@@ -11,8 +11,23 @@
 </head>
 <body>
     <header>
-        <a href="#/auth/register" class="btn btn-primary" id="register-btn">Register</a>
-        <button class="btn btn-danger" id="logout-btn">Logout</button>
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link active" href="#/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#/auth/register" id="register-btn">Register</a>
+            </li>
+            <li class="nav-item">
+              <button class="nav-link btn btn-danger" id="logout-btn">Logout</button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#/my-cookie" id="my-cookie">Your Cookie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#/home/add" id="add-cookie">Add Cookie</a>
+            </li>
+        </ul>
     </header>
 
     <div id="content"></div>
@@ -29,10 +44,12 @@
     <script src="./js/helpers/templates.js"></script>
     <script src="./js/app/data-requester.js"></script>
     <script src="./js/app/data.js"></script>
+    <script src="./js/helpers/cookie-actions.js"></script>
 
     <!-- Controllers -->
     <script src="./js/controllers/home-controller.js"></script>
     <script src="./js/controllers/users-controller.js"></script>
+    <script src="./js/controllers/cookies-controller.js"></script>
 
 
     <!-- JS -->

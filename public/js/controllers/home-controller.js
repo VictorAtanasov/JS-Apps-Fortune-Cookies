@@ -1,16 +1,22 @@
 var homeController = function(){
 
     function home(context){
-        var data;
-        dataRequester.get('api/cookies')
+        var cookieData;
+        data.cookies.all()
             .then((resData) => {
-                data = resData;
+                cookieData = resData;
+                //console.log(cookieData.result)
                 return templates.get('home')
             })
             .then((template) => {
-                context.$element().html(template(data.result))
+                var cookies = cookieData.result;
+                console.log(cookies)
+                context.$element().html(template(cookies));
+
+                $('.like').on('click', cookieActions.like);
+                $('.dislike').on('click', cookieActions.dislike);
             })
-    }
+    };
 
     return{
         home: home

@@ -1,0 +1,24 @@
+<h1>Hourly Cookie</h1>
+<div class="card-columns">
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{img}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{text}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted"><strong>Category: </strong>{{category}}</h6>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <strong>Likes: </strong><span id="like{{id}}">{{likes}}</span>
+            </li>
+            <li class="list-group-item dislike{{id}}">
+                <strong>Dislikes: </strong>
+                <span id="dislike{{id}}">{{dislikes}}</span>
+            </li>
+            <li class="list-group-item"><strong>Hours: </strong>{{hours}}</li>
+        </ul>
+        <div class="card-body">
+            <button class="card-link btn btn-success like" id="{{id}}">Like</button>
+            <button class="card-link btn btn-danger dislike" id="{{id}}">Dislike</button>
+        </div>
+    </div>
+</div>
